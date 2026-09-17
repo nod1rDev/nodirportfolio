@@ -11,32 +11,7 @@ export default function About() {
   });
 
   // Main animation variants
-  const containerVariants: Variants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: {
-      y: 20,
-      opacity: 0,
-    },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-  };
+  
 
   const workExperience = [
     {
@@ -132,12 +107,12 @@ export default function About() {
         ref={ref}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        variants={containerVariants}
+       
         className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl"
       >
         {/* Header */}
         <motion.div
-          variants={itemVariants}
+          
           className="text-center mb-20 lg:mb-24"
         >
           <div className="mb-6 font-mono text-sm text-muted-foreground animate-fade-in">
@@ -159,11 +134,11 @@ export default function About() {
 
         {/* Profile Section */}
         <motion.div
-          variants={containerVariants}
+          
           className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center mb-20 lg:mb-24"
         >
           {/* Image */}
-          <motion.div variants={itemVariants} className="order-2 lg:order-1">
+          <motion.div  className="order-2 lg:order-1">
             <div className="terminal-border rounded-xl p-8 relative group mx-auto lg:mx-0 w-full max-w-md lg:max-w-none hover:scale-105 transition-transform duration-500">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-xl opacity-0 transition-opacity duration-500" />
 
@@ -179,7 +154,7 @@ export default function About() {
 
           {/* Developer Profile */}
           <motion.div
-            variants={containerVariants}
+            
             className="order-1 lg:order-2 space-y-8"
           >
             <div>
@@ -242,7 +217,7 @@ export default function About() {
 
         {/* Tech Stack */}
         <motion.div
-          variants={itemVariants}
+          
           className="terminal-border rounded-xl p-8 lg:p-12 hologram relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/10 to-transparent rounded-full blur-2xl" />
